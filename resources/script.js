@@ -36,11 +36,7 @@ const yogiQuotes = [
 ]
 
 const buttonClick = document.getElementById('new-quote-button')
-const quoteParagraph = document.getElementById('quote-p')
-
-/* function newQuote (arr) {
-    return arr[Math.floor((Math.random() * arr.length))];
-} */
+const quoteParagraph = document.getElementById('quote-display')
 
 function newQuote() {
     const randomIndex = Math.floor(Math.random() * yogiQuotes.length);
@@ -48,6 +44,4 @@ function newQuote() {
     quoteDisplay.textContent = `"${yogiQuotes[randomIndex]}"`;
   }
 
-/* buttonClick.addEventListener('click', function() {
-    quoteParagraph.textContent = newQuote(yogiQuotes);
-}); */
+buttonClick.addEventListener('click', newQuote);
