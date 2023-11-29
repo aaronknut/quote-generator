@@ -1,29 +1,39 @@
-html {
-    background-image: url(https://images.unsplash.com/photo-1571104243924-eae5f22308b1?q=80&w=750&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+}
+
+@font-face {
+    font-family: 'Quantico';
+    src: url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
+}
+
+body {
+    margin: 0;
+    background-image: url(https://images.unsplash.com/photo-1571104243924-eae5f22308b1?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;
+    min-height: 100vh;
+    background-color: black;
+    background-attachment: fixed;
 }
 
-@import {
-font family: url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-}
-
-html::before {
+.container {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.65);
-    z-index: -1;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 main {
     display: block;
-    height: 800px;
+    height: auto;
     width: auto;
 }
 
@@ -46,7 +56,8 @@ blockquote {
     width: auto;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 2rem;
+    height: auto;
 }
 
 p {
@@ -56,10 +67,10 @@ p {
     text-align: center;
 }
 
-.button {
+div.button {
     display: flex;
     justify-content: center;
-    margin: 50px;
+    margin: 25px 0;
 }
 
 button {
@@ -79,11 +90,24 @@ button:hover {
     background: rgb(191, 30, 30);
 }
 
-p.disclaimer {
-    font-size: 0.8rem;
+h5 {
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 50px 0 0 0;
+}
+
+.about>p {
+    font-size: 1.2rem;
+    padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
     p {
       font-size: 1.6rem;
     }
@@ -92,7 +116,7 @@ p.disclaimer {
         font-size: 1rem;
     }
 
-    body {
-        margin: 0 20px;
+    .about>p {
+        padding: 0 20px;
     }
   }
